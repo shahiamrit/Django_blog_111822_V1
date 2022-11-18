@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block link %}<link rel="stylesheet" href="{% static 'css/blog.css' %}" /> {% endblock link %}
+{% block content %}
+{% include 'blog/navbar.html' %}
+{% for data in dt %}
+<div class="blog-width">
+    <h1 class="blog-h1">{{ data.name }}</h1>
+    <p class="blog-p">{{ data.title|safe }}</p>
+    <button><a href="{% url 'child_001:readmore' data.id %}">Read more</a></button>
+</div>
+{% endfor %}
+{% endblock %}

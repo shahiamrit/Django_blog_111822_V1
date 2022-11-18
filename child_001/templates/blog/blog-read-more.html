@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block link %}<link rel="stylesheet" href="{% static 'css/blog.css' %}" /> {% endblock link %}
+{% block content %}
+{% include 'blog/navbar.html' %}
+<div class="blog-width">
+    <h1 class="blog-h1">{{ rd.name }}</h1>
+    <p class="blog-p">{{ rd.body|safe }}</p>
+</div>
+{% endblock %}
