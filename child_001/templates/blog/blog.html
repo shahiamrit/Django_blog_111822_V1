@@ -5,7 +5,7 @@
 {% include 'blog/navbar.html' %}
 {% for data in dt %}
 <div class="blog-width">
-    <h1 class="blog-h1">{{ data.name }}</h1>
+    <h1 class="blog-h1">{{ data.category_name }}</h1>
     <p class="blog-p">{{ data.title|safe }}</p>
     <button><a href="{% url 'child_001:readmore' data.id %}">Read more</a></button>
 </div>

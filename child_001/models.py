@@ -1,12 +1,14 @@
 from django.db import models
 
 # Create your models here.
-
-class Blog(models.Model):
-    name = models.CharField(max_length=100)
-    title = models.TextField()
-    body = models.TextField()
+class Category(models.Model):
+    name = models.CharField(max_length=100, verbose_name = "Category Name")
     def __str__(self):
         return self.name
 
-    
+class Blog(models.Model):
+    category_name = models.ForeignKey(Category, on_delete=models.CASCADE)
+    title = models.TextField()
+    body = models.TextField()
+    def __str__(self):
+        return self.category_name.name

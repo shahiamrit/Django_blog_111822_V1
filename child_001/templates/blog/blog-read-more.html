@@ -4,7 +4,7 @@
 {% block content %}
 {% include 'blog/navbar.html' %}
 <div class="blog-width">
-    <h1 class="blog-h1">{{ rd.name }}</h1>
+    <h1 class="blog-h1">{{ rd.category_name }}</h1>
     <p class="blog-p">{{ rd.body|safe }}</p>
 </div>
 {% endblock %}
