@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-fcx$1_^%&-#tx-)nic==+f5g5aeh6qkv6@j9-+r*9uph=(h2k%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["shahiamrit365.com.np", "www.shahiamrit365.com.np", "localhost"]
+ALLOWED_HOSTS = ["shahiamrit365.com.np", "www.shahiamrit365.com.np", "localhost", "127.0.0.1"]
 
 
 # Application definition
