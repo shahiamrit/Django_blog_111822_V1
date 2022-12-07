@@ -12,3 +12,5 @@ class Blog(models.Model):
     body = models.TextField()
     def __str__(self):
         return self.category_name.name
+class test(models.Model):
+    name = models.TextField()
