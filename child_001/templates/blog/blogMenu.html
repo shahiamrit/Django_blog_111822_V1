@@ -2,7 +2,9 @@
 {% block link %}<link rel="stylesheet" href="{% static 'css/blogMenu.css' %}" /> {% endblock link %}
 <div class="fl">
     {% for data in dt %}
+    {% ifchanged %}
     <a href="{% url 'child_001:cat' data.category_name_id %}"><li>{{ data.category_name }}</li></a>
+    {% endifchanged %}
     
     {% endfor %}
 </div>

@@ -20,5 +20,6 @@ def readmore(request, id):
 def cat(request, id):
     data = Blog.objects.filter(category_name_id=id)
     data2 = Blog.objects.all()
+    print(data2)
     context = {'rd': data, 'dta': data2}
     return render(request, 'blog/categoryDetail.html', context)  

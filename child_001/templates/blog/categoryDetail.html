@@ -9,7 +9,9 @@
 
 <div class="fl">
     {% for data in dta %}
+    {% ifchanged %}
     <a href="{% url 'child_001:cat' data.category_name_id %}"><li>{{ data.category_name }}</li></a>
+    {% endifchanged %}
     
     {% endfor %}
 </div>
