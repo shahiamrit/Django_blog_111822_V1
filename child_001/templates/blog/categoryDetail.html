@@ -1,18 +1,27 @@
 {% extends 'blog/base.html' %}
 {% load static %}
-{% block link %}<link rel="stylesheet" href="{% static 'css/blog.css' %}" /> {% endblock link %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/blog.css' %}" /> 
+<link rel="stylesheet" href="{% static 'css/blogMenu.css' %}" /> 
+{% endblock link %}
 {% block content %}
 {% include 'blog/navbar.html' %}
 
-
-{% include 'blog/blogMenu.html' %}
+<div class="fl">
+    {% for data in dta %}
+    <a href="{% url 'child_001:cat' data.category_name_id %}"><li>{{ data.category_name }}</li></a>
+    
+    {% endfor %}
+</div>
 
 <hr class="blog-width">
-{% for data in dt %}
+{% for data in rd %}
 <div class="blog-width">
     <h1 class="blog-h1">{{ data.category_name }}</h1>
     <p class="blog-p">{{ data.title|safe }}</p>
     <button><a href="{% url 'child_001:readmore' data.id %}">Read more</a></button>
 </div>
 {% endfor %}
+
+
 {% endblock %}
