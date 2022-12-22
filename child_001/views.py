@@ -2,9 +2,11 @@ from django.shortcuts import render, HttpResponse
 from . models import Blog, Category
 # Create your views here.
 
-def home(request):
-    return render(request, 'blog/index.html')
+# def home(request):
+#     return render(request, 'blog/index.html')
 
+def home(request):
+    return render(request, 'blog/home-main.html')
 
 def blog(request):
     data = Blog.objects.all()
