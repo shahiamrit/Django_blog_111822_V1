@@ -1,0 +1,6 @@
+.fl {
+    margin: 20px 200px;
+    display: flex;
+    list-style-type: none;
+    gap: 5%;
+}

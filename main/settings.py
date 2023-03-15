@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-fcx$1_^%&-#tx-)nic==+f5g5aeh6qkv6@j9-+r*9uph=(h2k%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["shahiamrit365.com.np", "www.shahiamrit365.com.np", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["shahiamrit365.com.np", "www.shahiamrit365.com.np", "localhost", "127.0.0.1", "towardsintelligent.com", "www.towardsintelligent.com"]
 
 
 # Application definition
@@ -75,23 +75,23 @@ WSGI_APPLICATION = 'main.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+#}
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django-shahiamrit365',
+        'USER': 'django-shahiamrit365',
+        'PASSWORD': 'drZ6oucApiYk2VUl',
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
     }
 }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'django-shahiamrit365',
-#         'USER': 'django-shahiamrit365',
-#         'PASSWORD': 'drZ6oucApiYk2VUl',
-#         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-#         'PORT': '3306',
-#     }
-# }
 
 
 # Password validation
