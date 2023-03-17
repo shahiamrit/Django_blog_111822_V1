@@ -27,7 +27,7 @@
 <hr class="blog-width">
 {% for data in rd %}
 <div class="blog-width">
-    <h1 class="blog-h1">{{ data.category_name }}</h1>
+    <h1 class="blog-h1">{{ data.title|safe }}</h1>
     <p class="blog-p">{{ data.title|safe }}</p>
     <button><a href="{% url 'child_001:readmore' data.id %}">Read more</a></button>
 </div>
