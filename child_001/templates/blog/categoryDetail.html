@@ -3,8 +3,16 @@
 {% block link %}
 <link rel="stylesheet" href="{% static 'css/blog.css' %}" /> 
 <link rel="stylesheet" href="{% static 'css/blogMenu.css' %}" /> 
+<link rel="stylesheet" href="{% static 'css/nav.css' %}" /> 
 {% endblock link %}
 {% block content %}
+
+<div>
+    <img id='imglogo' src="{{ logo.logo.url }}" alt="" />
+    <!-- side by side content -->
+    </div>
+
+
 {% include 'blog/navbar.html' %}
 
 <div class="fl">

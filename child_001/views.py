@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-from . models import Blog, Category
+from . models import Blog, Category, Logo
 # Create your views here.
 
 # def home(request):
@@ -10,18 +10,21 @@ def home(request):
 
 def blog(request):
     data = Blog.objects.all()
-    context = {'dt': data}
+    logo = Logo.objects.all()
+    context = {'dt': data, 'logo': logo}
     return render(request, 'blog/blog.html', context)
 
 def readmore(request, id):
     data = Blog.objects.get(pk=id)
+    logo = Logo.objects.all()
     print(data)
-    context = {'rd': data}
+    context = {'rd': data, 'logo': logo}
     return render(request, 'blog/blog-read-more.html', context)   
 
 def cat(request, id):
     data = Blog.objects.filter(category_name_id=id)
     data2 = Blog.objects.all()
+    logo = Logo.objects.all()
     print(data2)
-    context = {'rd': data, 'dta': data2}
+    context = {'rd': data, 'dta': data2, 'logo': logo}
     return render(request, 'blog/categoryDetail.html', context)  

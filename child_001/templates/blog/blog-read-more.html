@@ -1,7 +1,13 @@
 {% extends 'blog/base.html' %}
 {% load static %}
-{% block link %}<link rel="stylesheet" href="{% static 'css/blog.css' %}" /> {% endblock link %}
+{% block link %}<link rel="stylesheet" href="{% static 'css/blog.css' %}" /> 
+<link rel="stylesheet" href="{% static 'css/nav.css' %}" /> 
+{% endblock link %}
 {% block content %}
+<div>
+<img id='imglogo' src="{{ logo.logo.url }}" alt="" />
+<!-- side by side content -->
+</div>
 {% include 'blog/navbar.html' %}
 <div class="blog-width">
     <h1 class="blog-h1">{{ rd.category_name }}</h1>

@@ -1,6 +1,15 @@
+{% load static %}
+{% block link %}<link rel="stylesheet" href="{% static 'css/nav.css' %}" /> {% endblock link %}
+<div>
+  {% for logo in logo %}
+<img id='imglogo' src="{{ logo.logo.url }}" alt="" />
+{% endfor %}
+<!-- side by side content -->
+</div>
+
+<!-- Second header -->
 <div class="header">
   <div class="nav">
-    <img src="" alt="" />
     <ul>
       <li><a href="/">Home</a></li>
       <li><a href="#">Features</a></li>

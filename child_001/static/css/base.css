@@ -27,14 +27,14 @@ body {
     text-decoration: none;
     color: #fff;
     padding: 1.5rem;
-    font-weight: bold;
-    font-size: 18px;
+    /* font-weight: bold; */
+    font-size: 16px;
     transition: all .5s ease;
     
 }
 
 .header {
-    background: rgb(151, 51, 40);
+    background: rgb(40, 134, 151);
     overflow: hidden;
     height: 40px;
     padding-top: 16px;

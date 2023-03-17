@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
-from . models import Blog, Category
+from . models import Blog, Category, Logo
 # Register your models here.
 
 admin.site.register(Category)
@@ -8,3 +8,4 @@ class BlogModelAdmin(SummernoteModelAdmin):
     summernote_fields = ('body',)
 
 admin.site.register(Blog, BlogModelAdmin)
+admin.site.register(Logo)

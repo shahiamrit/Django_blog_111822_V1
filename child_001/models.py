@@ -14,3 +14,8 @@ class Blog(models.Model):
         return self.category_name.name
 class test(models.Model):
     name = models.TextField()
+
+# Logo
+class Logo(models.Model):
+    logo = models.ImageField(upload_to='logo/')
+    
