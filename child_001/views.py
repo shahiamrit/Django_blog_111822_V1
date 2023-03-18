@@ -9,7 +9,7 @@ def home(request):
     return render(request, 'blog/home-main.html')
 
 def blog(request):
-    data = Blog.objects.all()
+    data = Blog.objects.all().order_by('-id')
     logo = Logo.objects.all()
     context = {'dt': data, 'logo': logo}
     return render(request, 'blog/blog.html', context)
@@ -22,7 +22,7 @@ def readmore(request, id):
     return render(request, 'blog/blog-read-more.html', context)   
 
 def cat(request, id):
-    data = Blog.objects.filter(category_name_id=id)
+    data = Blog.objects.filter(category_name_id=id).order_by('-id')
     data2 = Blog.objects.all()
     logo = Logo.objects.all()
     print(data2)
