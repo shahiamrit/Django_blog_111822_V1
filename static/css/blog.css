@@ -35,7 +35,7 @@
   }
   
   .header {
-      background: rgb(30, 139, 131);
+      background: #0061a5;
       overflow: hidden;
       height: 40px;
       padding-top: 16px;
@@ -73,7 +73,6 @@
   }
 
   .blog-p {
-    padding-bottom: 18px;
     line-height: 24px;
     
 
@@ -84,7 +83,7 @@
     /* background-color: #1e8b83; */
     border: none;
     color: black;
-    padding: 12px 18px;
+    padding: 8px 14px;
     text-align: center;
     text-decoration: none;
     display: inline-block;

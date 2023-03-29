@@ -13,7 +13,7 @@ body {
   height: 100vh;
 
 }
-
+/* check */
 .nav ul {
     list-style: none;
     display: -webkit-flex;
@@ -27,14 +27,14 @@ body {
     text-decoration: none;
     color: #fff;
     padding: 1.5rem;
-    font-weight: bold;
-    font-size: 18px;
+    /* font-weight: bold; */
+    font-size: 16px;
     transition: all .5s ease;
     
 }
 
 .header {
-    background: rgb(151, 51, 40);
+    background: #0061a5;
     overflow: hidden;
     height: 40px;
     padding-top: 16px;
